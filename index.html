@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20212207 최민규</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css">
+
+  </head>
+  <body>
+    <div class="web">
+      <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="브랜드 로고" />
+            </a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="task-manage.html">과제</a></li>
+          <li><a href="calendar.html">캘린더</a></li>
+          <li><a href="stats">기록</a></li>
+        </ul>
+
+        <div class="right_area">
+            <div class="search_area">
+                <input type="search" placeholder="과제 검색" />
+            </div>
+            <a href="task-register.html" class="create">등록</a>
+        </div>
+      </header>
+      <main class="home_page">
+        <section class="top_cards">
+            <div class="top_card">
+                <p>전체 과제</p>
+                <strong id="totalCount">0</strong>
+            </div>
+
+            <div class="top_card">
+                <p>완료</p>
+                <strong id="doneCount">0</strong>
+            </div>
+
+            <div class="top_card">
+                <p>남은 과제</p>
+                <strong id="remainingCount">0</strong>
+            </div>
+
+            <div class="top_card card_danger">
+                <p>오늘 마감</p>
+                <strong id="todayCount">0</strong>
+            </div>
+        </section>
+
+        <section class="content_grid">
+            <div class="deadline_box">
+                <div class="box_top">
+                    <h2>마감 임박 과제</h2>
+                    <span id="deadlineDday">-</span>
+                </div>
+
+                <h3 id="deadlineTitle">과제가 없습니다.</h3>
+                <p class="subject" id="deadlineSubject">-</p>
+
+                <div class="priority" id="deadlinePriority">-</div>
+            </div>
+
+            <div class="todo_box">
+                <h2>오늘 할 일</h2>
+                
+                <ul id="todoList">
+                   
+                </ul>
+            </div>
+        </section>
+        <section class="progress_box">
+            <p id="progressText">전체 진행률 0%</p>
+
+            <div class="progress_bar">
+                <div class="progress_fill" id="progressFill"></div>
+            </div>
+        </section>
+      </main>
+      <!-- supabase 백엔드 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="Javascript/supabase.js"></script>
+    <script src="Javascript/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+.home_page {
+  width: 100%;
+  padding: 30px 80px 60px;
+  background-color: #ffffff;
+}
+
+/* 상단 4개 카드 스타일 */
+
+.top_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.top_card {
+  min-height: 90px;
+  border: 2px solid #dbe3ee;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_card p {
+  font-size: 20px;
+  color: #334155;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.top_card strong {
+  font-size: 25px;
+  color: #111827;
+  line-height: 1;
+}
+
+.card_danger {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+
+.card_danger p {
+  font-size: 20px;
+  color: #ef4444;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.card_danger strong {
+  color: #ef4444;
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* 중간 콘텐츠 박스 */
+
+.content_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  margin-bottom: 30px;
+}
+
+.deadline_box,
+.todo_box {
+  min-height: 205px;
+  border: 2px solid #dbe3ee;
+  border-radius: 10px;
+  background-color: white;
+  padding: 28px 22px;
+}
+
+.box_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deadline_box h2,
+.todo_box h2 {
+  font-size: 20px;
+  color: #111827;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.box_top span {
+  width: 56px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #ef4444;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  line-height: 1;
+}
+
+.deadline_box h3 {
+  font-size: 18px;
+  color: #111827;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.subject {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1;
+}
+
+.priority {
+  width: 105px;
+  height: 36px;
+  margin-top: 28px;
+  border-radius: 18px;
+  background-color: #fef3c7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  color: #111827;
+}
+
+/* 투두 리스트  */
+
+.todo_box ul {
+  list-style: none;
+}
+
+.todo_box li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;
+  color: #111827;
+  margin-bottom: 22px;
+  line-height: 1;
+}
+
+.todo_box input {
+  width: 13px;
+  height: 13px;
+}
+
+.progress_box {
+  height: 105px;
+  border: 2px solid #dbe3ee;
+  border-radius: 10px;
+  background-color: white;
+  padding: 32px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+.progress_box p {
+  font-size: 20px;
+  color: #111827;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.progress_bar {
+  width: 60%;
+  height: 16px;
+  background-color: #dbe3ee;
+}
+
+.progress_fill {
+  width: 0%;
+  height: 100%;
+  background-color: #10b981;
+  transition: width 0.4s ease;
+}

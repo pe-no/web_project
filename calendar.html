@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캘린더 페이지</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/calendar.css" />
+
+  </head>
+  <body>
+    <div class="web">
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="브랜드 로고" />
+          </a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="task-manage.html">과제</a></li>
+          <li><a href="calendar.html">캘린더</a></li>
+          <li><a href="#">기록</a></li>
+        </ul>
+
+        <div class="right_area">
+          <div class="search_area">
+            <input 
+              type="search"
+              id="searchInput" 
+              placeholder="과제 검색" />
+          </div>
+          <a href="task-register.html" class="create">등록</a>
+        </div>
+      </header>
+
+      <main class="calendar_page">
+        <section class="page_title">
+          <h1>과제 캘린더</h1>
+          <p>등록된 과제의 마감일을 달력에서 한눈에 확인하세요.</p>
+        </section>
+
+        <section class="calendar_container">
+          <div class="calendar_top">
+            <button id="prev-month" class="nav-btn">‹</button>
+            <h2 id="calendarTitle">2026년 5월</h2>
+            <button id="next-month" class="nav-btn">›</button>
+          </div>
+
+          <div class="calendar_week">
+            <div>일</div>
+            <div>월</div>
+            <div>화</div>
+            <div>수</div>
+            <div>목</div>
+            <div>금</div>
+            <div>토</div>
+          </div>
+
+          <div class="calendar_dates" id="calendar-dates"></div>
+        </section>
+      </main>
+    </div>
+    <!-- supabase 백엔드 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="Javascript/supabase.js"></script>
+    <script src="Javascript/calendar.js"></script>
+  </body>
+</html>
