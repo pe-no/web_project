@@ -26,6 +26,7 @@
 }
 
 .top_card p {
+  font-family: "SUIT-Bold";
   font-size: 20px;
   color: #334155;
   line-height: 1;
@@ -44,6 +45,7 @@
 }
 
 .card_danger p {
+  font-family: "SUIT-Bold";
   font-size: 20px;
   color: #ef4444;
   line-height: 1;
@@ -82,6 +84,7 @@
 
 .deadline_box h2,
 .todo_box h2 {
+  font-family: "SUIT-ExtraBold";
   font-size: 20px;
   color: #111827;
   line-height: 1;
@@ -105,6 +108,7 @@
 
 .deadline_box h3 {
   font-size: 18px;
+  font-family: "SUIT-SemiBold";
   color: #111827;
   line-height: 1;
   margin-bottom: 16px;
@@ -128,6 +132,7 @@
   justify-content: center;
 
   font-size: 15px;
+  font-family: "SUIT-Medium";
   color: #111827;
 }
 
@@ -166,6 +171,7 @@
 }
 
 .progress_box p {
+  font-family: "SUIT-Bold";
   font-size: 20px;
   color: #111827;
   white-space: nowrap;

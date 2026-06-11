@@ -20,7 +20,7 @@
 }
 
 .calendar_page .page_title h1 {
-  font-family: "Jalnan2", sans-serif;
+  font-family: "SUIT-Regular", sans-serif;
   font-size: 30px;
   margin: 0 0 -10px 0;
   color: #333;
@@ -42,7 +42,7 @@
 }
 
 #calendarTitle {
-  font-family: "Jalnan2", sans-serif;
+  font-family: "SUIT-Regular", sans-serif;
   font-size: 25px;
   margin: 0;
   color: #333;
@@ -85,7 +85,7 @@
 /* 요일 영역 */
 .calendar_week div {
   text-align: center;
-  font-family: "Jalnan2", sans-serif;
+  font-family: "SUIT-Regular", sans-serif;
   font-size: 25px;
   font-weight: 700;
   color: #6b7280;
@@ -114,7 +114,7 @@
 }
 
 .date-number {
-  font-family: "Jalnan2", sans-serif;
+  font-family: "SUIT-Regular", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }

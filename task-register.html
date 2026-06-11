@@ -21,23 +21,43 @@
           prevText: "이전 달",
           nextText: "다음 달",
           monthNames: [
-            "1월","2월","3월","4월","5월","6월",
-            "7월","8월","9월","10월","11월","12월"
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월",
           ],
           monthNamesShort: [
-            "1월","2월","3월","4월","5월","6월",
-            "7월","8월","9월","10월","11월","12월"
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월",
           ],
-          dayNames: ["일","월","화","수","목","금","토"],
-          dayNamesShort: ["일","월","화","수","목","금","토"],
-          dayNamesMin: ["일","월","화","수","목","금","토"],
+          dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+          dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+          dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
           weekHeader: "주",
-          yearSuffix: "년"
+          yearSuffix: "년",
         });
 
         $("#datepicker").datepicker({
           dateFormat: "yy-mm-dd",
-          showButtonPanel: true
+          showButtonPanel: true,
         });
       });
     </script>
@@ -55,15 +75,12 @@
           <li><a href="index.html">홈</a></li>
           <li><a href="task-manage.html">과제</a></li>
           <li><a href="calendar.html">캘린더</a></li>
-          <li><a href="#">기록</a></li>
+          <li><a href="history.html">기록</a></li>
         </ul>
 
         <div class="right_area">
           <div class="search_area">
-            <input 
-              type="search"
-              id="searchInput" 
-              placeholder="과제 검색" />
+            <input type="search" id="searchInput" placeholder="과제 검색" />
           </div>
           <a href="task-register.html" class="create">등록</a>
         </div>
