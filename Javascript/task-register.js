@@ -46,6 +46,10 @@ if (taskForm) {
       return;
     }
 
+    if (typeof addHistory === "function") {
+      addHistory("과제 등록 완료");
+    }
+
     alert("과제 등록 완료");
 
     location.href = "task-manage.html";

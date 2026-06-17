@@ -85,6 +85,8 @@ taskForm.addEventListener(
       return;
     }
 
+    addHistory("과제 수정 완료");
+
     alert("수정 완료");
 
     location.href = "task-manage.html";

@@ -93,17 +93,17 @@ loadTasks();
 document.addEventListener("click", async (event) => {
   // 완료 버튼
   if (event.target.classList.contains("complete_btn")) {
-    const taskId = Number(event.target.dataset.id);
+    console.log("click event working");
+    const btn = event.target.closest(".complete_btn");
 
-    // 현재 버튼 글자로 상태 판단
-    const newStatus =
-      event.target.textContent.trim() === "완료" ? "완료" : "진행 중";
+    const taskId = Number(btn.dataset.id);
+    const currentStatus = btn.dataset.status;
+
+    const newStatus = currentStatus === "완료" ? "진행 중" : "완료";
 
     const { error } = await supabaseClient
       .from("tasks")
-      .update({
-        status: newStatus,
-      })
+      .update({ status: newStatus })
       .eq("id", taskId);
 
     if (error) {
@@ -111,6 +111,8 @@ document.addEventListener("click", async (event) => {
       alert("상태 변경 실패");
       return;
     }
+
+    addHistory("과제 상태 변경: " + newStatus);
 
     loadTasks();
     return;
@@ -147,6 +149,8 @@ document.addEventListener("click", async (event) => {
     alert("삭제 실패");
     return;
   }
+
+  addHistory("과제 삭제됨");
 
   alert("삭제 완료");
 

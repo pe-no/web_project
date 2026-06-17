@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>20212207 최민규</title>
+    <title>히스토리 페이지</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/history.css" />
   </head>
   <body>
     <div class="web">
@@ -31,5 +32,19 @@
         </div>
       </header>
     </div>
+    
+  <main class="history_page">
+    <section class="page_title">
+      <h1>히스토리</h1>
+      <p>최근 활동 내역입니다.</p>
+    </section>
+
+    <div id="historyList"></div>
+  </main>
+
+    <!-- supabase 백엔드 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="Javascript/supabase.js"></script>
+    <script src="Javascript/history.js"></script>
   </body>
 </html>

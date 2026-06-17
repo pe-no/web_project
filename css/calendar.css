@@ -104,12 +104,16 @@
   background-color: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  min-height: 130px;
+  min-height: 100px;
   padding: 10px;
 
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.date-cell:hover {
+  background-color: #eef2ff;
 }
 
 .date-number {
@@ -144,6 +148,8 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  cursor: pointer;
 }
 
 .other-month {
