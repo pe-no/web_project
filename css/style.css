@@ -99,6 +99,13 @@ header {
   font-family: "SUIT-Bold";
   text-decoration: none;
   white-space: nowrap;
+
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.menu a:hover {
+  transform: translateY(-4px);
 }
 
 .right_area {

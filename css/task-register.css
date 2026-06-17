@@ -126,3 +126,20 @@
   background-color: white;
   color: #1f2937;
 }
+
+#datepicker{
+    width:100%;
+    height:48px;
+    padding:0 16px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+#datepicker:focus{
+    outline:none;
+    border-color:#4f7cff;
+    box-shadow:0 0 0 3px rgba(79,124,255,.15);
+}
