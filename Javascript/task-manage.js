@@ -44,7 +44,12 @@ async function loadTasks() {
   <div class="task_item">
 
     <div class="task_info">
-      <h2>${task.title}</h2>
+      <h2 class="task_title">
+        ${task.title}
+        <span class="${badgeClass} badge">
+          ${badgeText}
+        </span>
+      </h2>
       <p>
         ${task.subject}
         · ${task.deadline}
@@ -53,11 +58,6 @@ async function loadTasks() {
     </div>
 
     <div class="task_actions">
-
-      <span class="${badgeClass} badge">
-        ${badgeText}
-      </span>
-
       <button
         class="edit_btn"
         data-id="${task.id}"
@@ -66,11 +66,20 @@ async function loadTasks() {
       </button>
 
       <button
+        class="complete_btn"
+        data-id="${task.id}"
+        data-status="${task.status}"
+      >
+        ${task.status === "완료" ? "완료취소" : "완료"}
+      </button>
+
+      <button
         class="delete_btn"
         data-id="${task.id}"
       >
         삭제
       </button>
+
 
     </div>
 
@@ -82,6 +91,30 @@ async function loadTasks() {
 loadTasks();
 
 document.addEventListener("click", async (event) => {
+  // 완료 버튼
+  if (event.target.classList.contains("complete_btn")) {
+    const taskId = Number(event.target.dataset.id);
+
+    // 현재 버튼 글자로 상태 판단
+    const newStatus =
+      event.target.textContent.trim() === "완료" ? "완료" : "진행 중";
+
+    const { error } = await supabaseClient
+      .from("tasks")
+      .update({
+        status: newStatus,
+      })
+      .eq("id", taskId);
+
+    if (error) {
+      console.error(error);
+      alert("상태 변경 실패");
+      return;
+    }
+
+    loadTasks();
+    return;
+  }
   // 수정 버튼
   if (event.target.classList.contains("edit_btn")) {
     const taskId = Number(event.target.dataset.id);
@@ -136,14 +169,8 @@ filterButtons.forEach((button) => {
   });
 });
 
-searchInput.addEventListener(
-  "input",
-  async function () {
+searchInput.addEventListener("input", async function () {
+  currentKeyword = this.value.trim();
 
-    currentKeyword =
-      this.value.trim();
-
-    await loadTasks();
-
-  }
-);
+  await loadTasks();
+});
