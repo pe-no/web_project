@@ -93,7 +93,6 @@ loadTasks();
 document.addEventListener("click", async (event) => {
   // 완료 버튼
   if (event.target.classList.contains("complete_btn")) {
-    console.log("click event working");
     const btn = event.target.closest(".complete_btn");
 
     const taskId = Number(btn.dataset.id);
